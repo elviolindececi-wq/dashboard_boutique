@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Panel Ceci — Leads & Resultados</title>
-  <link rel="stylesheet" href="style.css?v=1" />
+  <link rel="stylesheet" href="style.css?v=2" />
 </head>
 <body>
   <main class="wrap">
@@ -85,6 +85,23 @@
         </div>
       </div>
 
+      <!-- ✅ NUEVO: Botón Expandir + Vista tipo “resultado novios” en 3ra persona -->
+      <div class="result-box" style="margin-top:12px;">
+        <div class="expand-head">
+          <h3 style="margin:0;">Vista “resultado del test” (tercera persona)</h3>
+          <button class="btn ghost" id="btn-toggle-couple" type="button">Ver vista completa</button>
+        </div>
+        <p class="muted" style="margin-top:10px;">
+          Esta sección replica el estilo del resultado del test, pero redactado para Ceci (tercera persona),
+          ideal para explicar y alinear durante la reunión.
+        </p>
+
+        <div class="hidden" id="couple-view" hidden>
+          <div class="divider"></div>
+          <div id="couple-view-content"></div>
+        </div>
+      </div>
+
       <div class="result-box" style="margin-top:12px;">
         <h3>Detalle (raw)</h3>
         <p class="muted">Por si Ceci necesita validar campos del Sheet.</p>
@@ -101,6 +118,6 @@
     </footer>
   </main>
 
-  <script src="app.js?v=1" defer></script>
+  <script src="app.js?v=2" defer></script>
 </body>
 </html>
