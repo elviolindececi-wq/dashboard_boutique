@@ -249,3 +249,50 @@ h2{
   color: var(--text);
 }
 .pkg-list li{ margin:6px 0; }
+
+.expand-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+.divider{
+  height:1px;
+  background: rgba(255,255,255,.10);
+  margin: 12px 0;
+}
+
+/* “Vista resultado” look */
+.couple-title{
+  font-size:18px;
+  font-weight:900;
+  margin:0 0 4px 0;
+}
+.couple-sub{
+  margin:0 0 12px 0;
+  color: var(--muted);
+  line-height:1.4;
+}
+.scene{
+  margin-top:10px;
+  padding:12px 14px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.02);
+}
+.scene .line{
+  margin:0;
+  color: var(--text);
+  line-height:1.55;
+}
+.gold-card{
+  margin-top:14px;
+  border-radius:16px;
+  border:1px solid rgba(215,180,106,.35);
+  background: linear-gradient(180deg, rgba(215,180,106,.14), rgba(255,255,255,.02));
+  padding:14px;
+}
+.gold-title{ font-weight:900; letter-spacing:.2px; margin-bottom:6px; }
+.gold-percentage{ font-size:34px; font-weight:900; margin:4px 0 10px; }
+.gold-text{ color: var(--muted); line-height:1.5; }
