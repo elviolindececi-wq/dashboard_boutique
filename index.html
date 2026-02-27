@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Panel Ceci — Leads & Resultados</title>
+  <link rel="stylesheet" href="style.css?v=1" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="brand">
+      <div class="logo" aria-hidden="true">🎻</div>
+      <div>
+        <h1>Panel Ceci</h1>
+        <p class="subtitle">Buscar leads • Ver resultados • Recomendar paquetes</p>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>Buscar lead</h2>
+      <p class="muted">Buscá por teléfono (recomendado), lead_id o nombre. Se mostrará el registro más reciente.</p>
+
+      <div class="grid-2">
+        <div class="field">
+          <label for="search-type">Tipo de búsqueda</label>
+          <select id="search-type">
+            <option value="phone" selected>Teléfono</option>
+            <option value="lead_id">Lead ID</option>
+            <option value="name">Nombre</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="search-query">Valor</label>
+          <input id="search-query" type="text" placeholder="Ej: 0985 689 454" />
+          <small>Tip: para teléfono, escribí como lo guardan en el formulario.</small>
+        </div>
+      </div>
+
+      <div class="cta-row split stack" style="margin-top:12px;">
+        <button class="btn ghost" id="btn-clear" type="button">Limpiar</button>
+        <button class="btn primary" id="btn-search" type="button">Buscar</button>
+      </div>
+
+      <div class="status" id="status" aria-live="polite"></div>
+    </section>
+
+    <section class="card hidden" id="screen-result" hidden>
+      <div class="topline">
+        <div>
+          <h2 id="lead-title">Lead</h2>
+          <p class="muted" id="lead-subtitle"></p>
+        </div>
+        <div class="pill" id="lead-priority">Prioridad: —</div>
+      </div>
+
+      <div class="grid-2" style="margin-top:12px;">
+        <div class="result-box">
+          <h3>Resumen del test</h3>
+          <div class="kv" id="kv-test"></div>
+        </div>
+
+        <div class="result-box">
+          <h3>Recomendación de paquete</h3>
+          <div id="package-reco"></div>
+        </div>
+      </div>
+
+      <div class="grid-2" style="margin-top:12px;">
+        <div class="result-box">
+          <h3>Resumen boutique para reunión</h3>
+          <div class="quote" id="boutique-summary"></div>
+
+          <div class="cta-row stack" style="justify-content:flex-start;">
+            <button class="btn ghost" id="btn-copy" type="button">Copiar resumen</button>
+            <a class="btn primary" id="btn-wa" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+          </div>
+
+          <p class="fineprint">*Copiar sirve para pegar en WhatsApp / Notas / CRM.</p>
+        </div>
+
+        <div class="result-box">
+          <h3>Datos del evento</h3>
+          <div class="kv" id="kv-event"></div>
+        </div>
+      </div>
+
+      <div class="result-box" style="margin-top:12px;">
+        <h3>Detalle (raw)</h3>
+        <p class="muted">Por si Ceci necesita validar campos del Sheet.</p>
+        <pre class="pre" id="raw-json"></pre>
+      </div>
+
+      <div class="cta-row" style="margin-top:14px;">
+        <button class="btn ghost" id="btn-hide" type="button">Ocultar resultados</button>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <span>© El Violín de Ceci — Panel interno</span>
+    </footer>
+  </main>
+
+  <script src="app.js?v=1" defer></script>
+</body>
+</html>
